@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+      
+  <!-- displays site properly based on user's device -->
+  <script src="https://kit.fontawesome.com/e86b715ccf.js" crossorigin="anonymous"></script>
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Huddle landing page with single introductory section</title>
+  <style> 
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap'); 
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  overflow: hidden;
+
+}
+
+.fullscreen-bg {
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 100vw;
+    height: 120vh;    
+    background-color: hsl(257, 40%, 49%);
+    background-size: cover;
+    background-position: center;
+    z-index: -1; /* Coloca atrás do conteúdo */   
+  }
+
+.bg-fundo{  
+  width: 92%;
+  height: 100vh;
+}
+
+  main{
+    width: 100%;  
+    height: auto;
+    display: grid;
+    grid-template-columns: 55% 45%;
+    gap: 3rem;
+ 
+  }
+
+#primary-section{  
+  display: flex;
+  flex-direction: column; 
+  margin-left: 4vw;
+  
+ }
+
+.img-logo{
+  margin-top: 3vw;
+  width: 15vw; 
+ }
+
+.mockups{
+  margin-top: 9vh;
+  margin-left: 5vw;
+  width: 91%;
+  height: 66%;  
+ 
+}
+
+button:hover{
+  background-color: hsl(300, 69%, 71%);
+  color: white !important;
+}
+
+pre{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 200;
+}
+
+
+
+.pre-mobile{
+  display: none;
+}
+
+.icones{
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  margin-top: 10vw;
+   width: 35vw;
+   gap: 0.9rem; 
+}
+
+.fa-brands {
+  display: flex;
+  width: 1.1rem;
+  height: 1.1rem;
+  align-items: center;
+  justify-content: center;
+  padding: 0.7rem;  
+  font-size:1.1rem;
+  border-radius: 50%;
+  border: 1px solid white;
+  background-color:hsl(257, 40%, 49%);
+}
+
+#secundary-section{
+  display: flex;  
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  margin-right: 9vw;
+   
+    
+ }
+
+
+ @media (min-width: 375px) and (max-width: 768px) { 
+
+
+body{
+  overflow: auto ;
+}
+
+
+.fullscreen-bg {    
+    height: 140vh;    
+   
+  }
+
+  #primary-section{  
+  display: flex;
+  flex-direction: column;
+  margin-left: 5vw; 
+ }
+
+main{
+    width: 100%;  
+    height: auto;
+    display: grid;
+    grid-template-columns: 100%;
+    gap: 3rem; 
+  }
+
+  .mockups{
+    margin-top: 9.5vh;  
+    width: 81vw;    
+  }
+
+  .bg-fundo{
+    display: none
+  } 
+
+  #secundary-section{
+    width: 100vw !important;
+    height: 90%;    
+    display: flex;  
+    margin-top: 22vw;  
+  }
+
+.titulo{ 
+  font-size: 1.7rem !important;    
+  width: 80% !important;
+  margin-top: -10vh !important;
+  margin-left: 9vw;
+  margin-bottom: 2vh; 
+}
+
+pre{
+  display: none;
+}
+
+.pre-mobile{
+  display: flex;
+  font-size: 1.1rem;
+  margin-left: 3vw;
+}
+
+.logo-mobile{
+  width: 30vw;
+  margin-left: 5.5vw;
+   margin-top: 4vh;
+ 
+}
+.bg-mobile{
+  width: 100% !important;    
+  text-align: justify !important;
+}
+
+.button-mobile{
+    width: 51vw !important;
+    height: 5vh !important;  
+    margin-top: 4vh !important ;
+    margin-left: 24vw;
+  }
+
+.icones{
+  display: flex;
+  justify-content: center;
+  margin-left: 33vw;
+}
+  }
+
+  @media (min-width: 769px) and (max-width: 1440px){
+  .mockups{
+  margin-top: 12vh;
+  margin-left: 5vw;
+  width: 92%;
+  height: 65% !important;
+ 
+  } 
+ 
+
+  }
+
+  
+   
+</style>
+</head>
+<body>
+<div class="fullscreen-bg">
+  <img class="bg-fundo" src="./images/bg-desktop.svg" alt="">
+  <img class="bg-mobile" src="./images/bg-mobile.svg" alt="">
+ 
+</div>
+  
+<main>
+ <Section id="primary-section">
+  <img class="img-logo logo-mobile" src="./images/logo.svg" alt="logo">
+  <img class="mockups mockups-mobile"src="./images/illustration-mockups.svg" alt="imagem pagina web e app">
+
+</Section> 
+ <Section id="secundary-section">
+<h1 class="titulo" style="font-weight: 600; width: 35vw; font-size: 2.6rem; margin-top: 16vw; ">Build The Community Your Fans Will Love</h1>
+<pre style="width: 58vw;font-size: 1.1rem; margin-top: 2vw; line-height: 1.5rem;">Huddle re-imagines the way we build communities. You have
+a voice, but so does your audience. Create connections 
+with your user as you engage in genuine discussion.  </pre>
+
+<pre class="pre-mobile">
+  Huddle re-imagines the way we build
+  communities. You have a voice, but so
+ does your audience. Create connections 
+      with your user as you engage in
+                   genuine discussion.  </pre>
+  
+
+
+
+<button class="button-mobile" style="width:13vw; height: 7vh; border-radius: 5rem; border: none; outline: none; margin-top: 3vw; font-size: 1.1rem; color: hsl(257, 40%, 49%);">Register</button>
+
+<section class="icones">
+<i class="fa-brands fa-facebook"></i>
+<i class="fa-brands fa-twitter"></i>
+<i class="fa-brands fa-instagram"></i>
+
+</section>
+
+
+
+
+</Section>
+
+
+
+</main>
+
+  
+
+
+</body>
+</html>
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
